@@ -7,7 +7,8 @@ app.controller('PrmMainMenuAfterController', ['$http', '$location', '$mdDialog',
         var mainMenus = document.getElementsByTagName('prm-main-menu');
         var a;
         if (mainMenus.length === 1) {
-            a = mainMenus[0] && mainMenus[0].children && mainMenus[0].children[0] && mainMenus[0].children[0].children;
+            a = mainMenus[0] && mainMenus[0].children && mainMenus[0].children[0] && mainMenus[0].children[0].children &&
+                mainMenus[0].children[0].children[0].children;
         } else if (mainMenus.length === 2) {
             a = mainMenus[1].getElementsByTagName('md-card');
         }
