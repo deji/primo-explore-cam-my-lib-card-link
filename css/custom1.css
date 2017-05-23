@@ -1,26 +1,14 @@
-/*
-    Hide the Tags option in the Primo May 2017 release
-*/
+/* ExL changes from https://knowledge.exlibrisgroup.com/Primo/Knowledge_Articles/How_to_disable_the_tags_in_Primo_classic_and_new_UI */
 
-#main\20 menu > a:nth-child(1) {
-    display: none;
+/*Hide Tags in Detailed Display*/
+[aria-label="Tags"]{display:none;}
+#tags{display:none;}
+
+/* Hide Tags in Main Menu when signed in – Tags and ETIQUETTES (French) will change depending on Code Table customizations */
+.md-button[aria-label="nui.mainmenu.label.tags"] {display: none;}
+
+/* Hide Tags on full list (ellipsis) */
+md-card.transparent-card:nth-child(1) {
+  display:none;
 }
 
-#main\20 menu > a:nth-child(2) {
-    box-shadow: 0 0 1px 0 rgba(0,0,0,.1);
-}
-
-#dialogContent_98 md-card:nth-child(1) {
-    display: none;
-}
-
-/*
-    Full record display hiding of tags
-*/
-#services-index > button:nth-child(7) {
-    display: none;
-}
-
-#tags {
-    display: none;
-}
