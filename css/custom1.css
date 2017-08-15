@@ -5,7 +5,8 @@
 #tags{display:none;}
 
 /* Hide Tags in Main Menu when signed in – Tags and ETIQUETTES (French) will change depending on Code Table customizations */
-.md-button[aria-label="nui.mainmenu.label.tags"] {display: none;}
+.md-button[aria-label="nui.mainmenu.label.tags"] {display: none !important;}
+[aria-label="TAGS"]{display:none !important;} /* added in Primo August 2017 release */
 
 /* Hide Tags on full list (ellipsis) */
 md-card.transparent-card:nth-child(1) {
