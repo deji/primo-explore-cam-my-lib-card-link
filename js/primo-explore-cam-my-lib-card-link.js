@@ -22,6 +22,7 @@ app.controller('PrmMainMenuAfterController', ['$http', '$location', '$mdDialog',
     }, function (res) {
         var links = mainMenuLinks;
         if (links.length > 0) {
+            angular.element(links[2]).removeAttr('href');
             // with Primo May 2017 release, out My Library Account menu item is now in third position
             angular.element(links[2]).unbind('click').bind("click", myAccountLink);
         }
