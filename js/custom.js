@@ -1,3 +1,9 @@
+(function(){
+"use strict";
+'use strict';
+
+var app = angular.module('viewCustom', ['angularLoad']);
+
 app.controller('PrmMainMenuAfterController', ['$http', '$location', '$mdDialog', '$scope', '$rootScope', '$state', '$interval', '$window', function ($http, $location, $mdDialog, $rootScope, $scope, $state, $interval, $window) {
     var vm = this;
 
@@ -7,8 +13,7 @@ app.controller('PrmMainMenuAfterController', ['$http', '$location', '$mdDialog',
         var mainMenus = document.getElementsByTagName('prm-main-menu');
         var a;
         if (mainMenus.length === 1) {
-            a = mainMenus[0] && mainMenus[0].children && mainMenus[0].children[0] && mainMenus[0].children[0].children &&
-                mainMenus[0].children[0].children[0].children;
+            a = mainMenus[0] && mainMenus[0].children && mainMenus[0].children[0] && mainMenus[0].children[0].children && mainMenus[0].children[0].children[0].children;
         } else if (mainMenus.length === 2) {
             a = mainMenus[1].getElementsByTagName('md-card');
         }
@@ -82,3 +87,4 @@ app.component('prmMainMenuAfter', {
     controller: 'PrmMainMenuAfterController',
     template: '<div ></div>'
 });
+})();
