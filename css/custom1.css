@@ -9,7 +9,7 @@
 [aria-label="TAGS"]{display:none !important;} /* added in Primo August 2017 release */
 
 /* Hide Tags on full list (ellipsis) */
-md-card.transparent-card:nth-child(1) {
+prm-main-menu md-card:nth-child(1) {
   display:none;
 }
 
